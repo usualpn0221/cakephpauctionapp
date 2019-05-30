@@ -31,8 +31,8 @@ class AuctionBaseController extends AppController
                 'action' => 'login'
             ],
             'logoutRedirect' => [
-                'controller' => 'Users',
-                'action' => 'logout'
+                'controller' => 'auction',
+                'action' => 'index'
             ],
             'authError' => 'ログインしてください。',
         ]);

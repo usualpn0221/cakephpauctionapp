@@ -17,7 +17,7 @@
   </tr>
 </thead>
 <tbody>
-<?php if (!empty($bidrequests)): ?>
+<?php if (!empty($bidmsgs)): ?>
   <?php foreach ($bidmsgs as $msg): ?>
   <tr>
     <td><?= h($msg->user->username) ?></td>

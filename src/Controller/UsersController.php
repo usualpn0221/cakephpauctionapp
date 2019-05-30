@@ -36,12 +36,12 @@ class UsersController extends AppController
                 ]
             ],
             'loginRedirect' => [
-                'controller' => 'Users',
-                'action' => 'login'
+                'controller' => 'auction',
+                'action' => 'index'
             ],
             'logoutRedirect' => [
                 'controller' => 'Users',
-                'action' => 'logout'
+                'action' => 'login'
             ],
             'authError' => 'ログインしてください。',
         ]);
@@ -71,7 +71,7 @@ class UsersController extends AppController
 // 認証を使わないページの設定
     public function beforeFilter(Event $event){
         parent::beforeFilter($event);
-        $this->Auth->allow(['login']);
+        $this->Auth->allow(['login','add']);
         // 後でaddを削除する
     }
 
