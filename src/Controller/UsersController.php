@@ -64,7 +64,7 @@ class UsersController extends AppController
 // ログアウト処理
     public function logout(){
     // セッションを破棄
-        $this->request->session()->destroy();
+        $this->request->getsession()->destroy();
         return $this->redirect($this->Auth->logout());
     }
 
